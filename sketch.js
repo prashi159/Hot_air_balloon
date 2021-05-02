@@ -59,14 +59,14 @@ function draw() {
 }
 function readPosition(data){
    position = data.val();
-   balloon.x = height.x;
-   balloon.y = height.y;
+   balloon.x = position.x;
+   balloon.y = position.y;
 }
 
 function updateHeight(x,y){
   database.ref('balloon/height').set({
-    'x' : height.x + x,
-    'y' : height.y + y
+    'x' : position.x + x,
+    'y' : position.y + y
   })
 }
 
